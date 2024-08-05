@@ -1,0 +1,740 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Times New Roman', Times, serif;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #fd925d;
+    color: white;
+}
+.header {
+
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 30px;
+    padding: 3rem 9% 2.5rem;
+    background: rgba(219, 214, 214, 0.3);
+    backdrop-filter: blur(10px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 5;
+}
+
+.logo img {
+    height: 80px;
+    width: 65px;
+    margin-left: -70px;
+    margin-top: 1.5px;
+}
+
+.logo-name h1 {
+    font-family: cursive;
+    padding-right: 150px;
+    cursor: pointer;
+    text-shadow: 10 10 30px #f35709;
+    transition: 0.3s ease;
+
+}
+
+.logo-name h1:hover {
+    transform: scale(1.1);
+}
+
+
+.logo:hover {
+    transform: scale(1.1);
+}
+
+
+.navbar a {
+    display: inline;
+    font-size: 18px;
+    color: white;
+    font-weight: 400;
+    margin-left: 2.5rem;
+    margin-inline: 10px;
+    font-weight: 450;
+    transition: 0.2s ease;
+    border-bottom: 3px solid transparent;
+}
+
+.navbar a:hover {
+    color: #fa712d;
+    border-bottom: 3px solid #fa712d;
+}
+.img{
+    height: 680px;
+   width: 100%;
+   background-image: url("https://www.shutterstock.com/image-photo/beauty-asian-young-muslim-girl-260nw-2322813677.jpg");
+   background-size: cover;
+   background-repeat: no-repeat;
+   transition: 5s;
+   opacity: 50%;
+   animation-name: animate;
+   animation-play-state: running;
+   animation-timing-function: ease-in-out;
+   animation-duration: 20s;
+   animation-fill-mode: forwards;
+   animation-iteration-count: infinite; 
+} 
+@keyframes animate {
+   0%{
+       background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR1g4ld2yJ3CKQZvJcPtsklVXPo26kFxdX-_w&s");
+         
+   }
+   20%{
+       background-image: url("data:image/jpeg;base64,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");
+   }
+   40%{
+       background-image: url("https://i.ytimg.com/vi/45QnbhVMg_8/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLB98FBqXL57qF3G9zkpUANFVYv6Og");
+   }
+   60%{
+background-image: url("https://t3.ftcdn.net/jpg/06/27/53/68/360_F_627536897_QzFBXE4YkFN13KjNF1F2c5PfRb2sxkep.jpg");
+   }
+   80%{
+background-image: url("https://img.freepik.com/premium-photo/muslim-women-smiling-hijab_124185-3075.jpg");
+   }
+   100%{
+background-image: url("https://t4.ftcdn.net/jpg/05/97/93/19/360_F_597931905_284b8m5PzydZG7Qio3fUqxb0UNSw3hR2.jpg");
+   }
+}
+
+
+.home-content {
+    margin-left: 50px;
+
+}
+
+span {
+    color: #f35709;
+}
+.tagline{
+    text-align: center;
+}
+.home-content h3 {
+    margin-bottom: 2rem;
+    margin-top: 1rem;
+    font-size: 3.8rem;
+}
+
+.home-content h1 {
+    font-size: 5rem;
+    font-weight: 700;
+    margin-top: 4rem;
+    line-height: 1;
+}
+
+.home-content p {
+    font-size: 23px;
+}
+
+.text-animation {
+    font-size: 34px;
+    font-weight: 600;
+    min-width: 280px;
+}
+
+.text-animation span {
+    position: relative;
+}
+
+.text-animation span::before {
+    content: "Hijab Beauty";
+    color: #f35709;
+    animation: words 20s infinite;
+}
+
+.text-animation span::after {
+    content: "";
+    background-color: #fc9460;
+    position: absolute;
+    width: calc(100% + 8px);
+    height: 100%;
+    border-left: 3px solid #fa712d;
+    right: -8px;
+    animation: cursor 0.6s infinite, typing 20s steps(14) infinite;
+
+}
+
+@keyframes cursor {
+    to {
+        border-left: 2px solid #f35709;
+    }
+}
+
+@keyframes words {
+
+    0%,
+    20% {
+        content: "Endless Fashion";
+    }
+
+    21%,
+    40% {
+        content: "World With Grace.";
+    }
+
+    41%,
+    60% {
+        content: "Modesty In Motion.";
+    }
+
+    61%,
+    80% {
+        content: "Success in a Hijab.";
+    }
+
+    81%,
+    100% {
+        content: "Trendy Hijabs";
+    }
+}
+
+@keyframes typing {
+
+    10%,
+    15%,
+    30%,
+    35%,
+    50%,
+    55%,
+    70%,
+    75%,
+    90%,
+    95% {
+        width: 0;
+    }
+
+    5%,
+    20%,
+    25%,
+    40%,
+    45%,
+    60%,
+    65%,
+    80%,
+    85% {
+        width: calc(100% + 8px);
+    }
+}
+
+
+.home-img {
+    border-radius: 50%;
+    margin-inline: 850px;
+    margin-top: -400px;
+}
+
+.home-img img {
+    position: relative;
+    top: 3rem;
+    width: 32vw;
+    border-radius: 50%;
+    box-shadow: 0 0 25px #f35709;
+    cursor: pointer;
+    transition: 0.4 ease-in-out;
+    transform: translate(-50% -50%);
+}
+
+.home-img img:hover {
+    box-shadow: 0 0 25px #f35709,
+        0 0 50px #f35709,
+        0 0 100px #f35709;
+    transform: scale(1.5) rotate(-15 deg);
+}
+
+.btn1 {
+    margin-left: 100px;
+    background-color: #fc9460;
+    margin-top: 30px;
+    padding: 25px;
+    border-radius: 30px;
+    box-shadow: 0 0 25px #f35709;
+}
+
+.btn1 a {
+    font-size: 25px;
+    color: white;
+    font-weight: 300;
+}
+
+.btn1:hover {
+    transform: scale(1.2);
+    box-shadow: 0 0 25px #f35709,
+        0 0 50px #f35709,
+        0 0 100px #f35709;
+    transform: scale(1.5) rotate(-15 deg);
+}
+
+.collection {
+    height: 180px;
+    width: 100%;
+    background-color: #fd8346;
+    margin-top: 40px;
+
+}
+
+.content h1 {
+    text-align: center;
+    font-size: 4rem;
+    font-weight: 800;
+    letter-spacing: 2px;
+    padding-top: 30px;
+}
+.content p {
+    margin-left: 42px;
+    margin-top: 20px;
+    font-size: 22px;
+    text-align: center;
+}
+
+.maindiv {
+    width: 100%;
+    height: 500px;
+    background-color: #fd8346;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.maindiv div {
+    height: 400px;
+    width: 300px;
+    background-color: #fa681f;
+    border: 4px solid #f35709;
+}
+.maindiv div:hover{
+    transform: scale(1.1);
+}
+.maindiv div img{
+padding: 20px;
+
+}
+button{
+    width: 200px;
+    margin-left: 90PX;
+    padding: 16px;
+    border-radius: 10px;
+    margin-top: 3px;
+    color: white;
+    font-size: 22px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    background-color: #ff7d3c;
+    margin-inline: 40px;
+    border: 4px solid #f35709;
+    text-shadow: 0 0 25px #fd8346;
+}
+button:hover{
+    transform: scale(1.2);
+    box-shadow: 0 0 25px #fa9969,
+        0 0 50px #fa9969,
+        0 0 80px #fa9969;
+    transform: scale(1.2) rotate(-15 deg);
+}
+
+
+.navbar2{
+    width: 100%;
+    height: 40px;
+    padding-right: 30px;
+    padding-left: 60px;
+    padding-top: 20px;
+}
+.navbar2 a {
+    font-size: 20px;
+    font-weight: 500;
+    color: white;
+    margin-inline: -40px;
+    text-align: center;
+    padding-top: 35px;
+    display: inline;
+    justify-content: center;
+    align-items: center;
+    margin-left: 150px;
+    padding-left: 40px;
+}
+
+.product{
+    text-align: center;
+    font-size: 6rem;
+    font-weight: 800;
+    letter-spacing: 2px;
+    margin-top: 5px;
+    padding-top: -20px;
+
+}
+.navbar2 a:hover {
+    color: #fa712d;
+    border-bottom: 3px solid #fa712d;
+}
+.pro img{
+    border: 5px solid #f35709;
+    border-radius: 50% 50% 0 0; 
+    margin-left: 40px;
+    margin-top: 30px;
+}
+.pro img:hover{
+    box-shadow: 0 0 25px #f35709,
+        0 0 50px #f35709,
+        0 0 100px #f35709;
+    transform: scale(1.5) rotate(-15 deg);
+}
+.boxes{
+    width: 100%;
+    height: 580px;
+    background-color: #fd8346;
+    margin-top: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    
+}
+.boxes h1{
+    font-size: 4rem;
+    font-weight: 800;
+    letter-spacing: 2px;
+    margin-right: 600px;
+    margin-bottom: 500px;
+    padding-top: 30px;
+    padding-left: 30px;
+    } 
+    .boxes div{
+        height: 350px;
+    width: 280px;
+    background-color: #fa681f;
+    border: 4px solid #e45e1b;
+    margin-top: -500px;
+
+    }
+    .bxs-star{
+        margin-top: 5px;
+        margin-left: 5px;
+        
+    }
+.boxes div:hover{
+    box-shadow: 0 0 25px #f35709,
+    0 0 50px #f35709,
+    0 0 100px #f35709;
+   transform: scale(1.1);
+}
+.boxes div h3{
+    margin-top: 5px;
+    margin-left: 10px;
+}
+.RS{
+    margin-left: 12px;
+    margin-top: 5px;
+    opacity: 70%;
+    text-decoration: line-through;
+}
+.RS2{
+    margin-top: -18px;
+    margin-left: 80px;
+    font-weight: bold;
+}
+.start{
+margin-top: 18px;
+}
+.main-box{
+    height: 400px;
+    width: 100%;
+    background-color: #fd925d;
+    display: flex;
+    justify-content:space-between ;
+
+}
+.main-box h3{
+    font-size: 3rem;
+    font-weight: 700;
+    margin-left: 30px;
+    margin-top: 30px;
+}
+.main-box p{
+    margin-top: 130px;
+    text-align: left;
+    font-size: 20px;
+    padding-right: 100px ;
+    margin-left: -665px;
+
+}
+.main-box div{
+    height: 300px;
+    width: 260px;
+    margin-top: 130px;
+    margin-right: 40px;
+    background-color: #e45e1b;
+    border: 4px solid #fa681f;
+}
+h4{
+    font-size: 2m;
+}
+
+
+
+
+.button{
+    margin-left: 100px;
+    background-color: #fc9460;
+    margin-top: -100px;
+    margin-left: 80%;
+    padding: 15px;
+    border-radius: 30px;
+    box-shadow: 0 0 25px #f35709;
+}
+.button:hover{
+    transform: scale(1.2);
+    box-shadow: 0 0 25px #f35709,
+        0 0 50px #f35709,
+        0 0 100px #f35709;
+    transform: scale(1.5) rotate(-15 deg);
+   
+}
+.tagline{
+      font-size: 50px;
+}
+
+.footer{
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    height: 380px;
+    padding: 30px 0;
+    background-color: #fe7530;
+}
+.footer h1{
+    text-align: center;
+    font-size: 20px;
+}
+.footer .social{
+text-align: center;
+padding-bottom: 25px;
+color: #f35709;
+}
+.footer .social a{
+    font-size: 25px;
+    color: #f35709;
+    border: 2px solid #f35709;
+    width: 42px;
+    height: 42px;
+    line-height: 42px;
+    display: inline-block;
+    text-align: center ;
+    border-radius: 50%;
+    margin: 0 10px;
+    transition: 0.3s ease-in-out;
+}
+.footer .social a:hover{
+    transform: scale(1.2) translateY(-10px);
+    background-color: #f35709;
+    color: black;
+    box-shadow: 0 0 25px #f35709;
+}
+.footer ul{
+    margin-top: 0;
+    padding: 0;
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 0;
+    text-align: center;
+}
+.footer ul li a{
+    color: white;
+    border-bottom: 3px solid transparent;
+    transition: 0.3s ease-in-out;
+}
+.footer ul li a:hover{
+border-bottom: 3px solid #f35709;
+}
+.footerul li {
+    display: inline-block;
+    padding: 0 15px;
+}
+.footer .end-div{
+    width: 100%;
+    height: 50px;
+    background-color: #fa681f;
+}
+.end-div{
+    margin-top: 10px;
+}
+.footer .copyright{
+    margin-top: 50px;
+    padding-top: 10px;
+    text-align: center;
+    font-size: 16px;
+    color: white;
+}
+.footer-content{
+    text-align: right;
+    margin-right: 50px;
+    font-size: 16px;
+    
+}
+
+
+@media (max-width:500px){
+
+    .header{
+        flex-direction: column;
+        width: 830px;
+    }
+    .logo{
+        margin-top: -45px;
+        margin-left: -680px;
+    }
+    .logo-name h1{
+        margin-top:-70px;
+        margin-left:500;
+    }
+    .logo-name{
+        font-size: 10px;
+        margin-right: 390px;
+        margin-top: 10px;
+    }
+    .navbar {
+        width: 800px;
+        margin-top: -40px;
+        font-size: 5px;
+        margin-right: -170px;
+    }
+    .tagline{
+        width: 750px;
+        margin-left: 115px;
+        font-size: 30px;
+    }
+    div.img{
+        width: 830px; ;
+    }
+    .home-content{
+        width: 830px;
+    }
+    .home-content h1{
+        font-size:3rem ;
+        width: 750px;
+    }
+    .home-content h3{
+        font-size: 2.5rem;
+        width: 750px;
+    }
+    .home-content p{
+        width: 350px;
+        font-size: 19px;
+    }
+    .home-img{
+        margin-inline: 600px;
+        margin-top: -330px;
+        width: 5rem;
+    }
+    .maindiv{
+        width: 830px;
+        height: 300px;
+    }
+    .collection{
+        width: 830px;
+    }
+    .content h1{
+        font-size: 4rem;
+    }
+    .content p{
+        font-size: 20px;
+    }
+    .maindiv div{
+        width: 190px;
+        height: 230px;
+        margin-top: 30px;
+    }
+    .maindiv img{
+        width: 215px;
+        height: 190px;
+        margin-top: -12px;
+        margin-left: -18px;
+    }
+    button{
+        padding: 1px;
+        margin-left: 5px;
+        width: 170px;
+        margin-top: -12px;
+    }
+    
+    .main-box{  
+         width: 830px;
+    }
+    .main-box h3{
+        font-size: 2rem;
+        width: 1500px;
+        margin-top: 50px;
+    }
+    .main-box div{
+        width: 190px;
+        height: 230px;
+        margin-inline: 5px;
+
+    }
+    .main-box img{
+        width: 170px;
+        height: 170px;
+       
+    }
+    .main-box p{
+        font-size: 20px;
+        width: -80px;
+        margin-right: 100px;
+        margin-top: 130px;
+    }
+    .pro{
+        width: 830px;
+    }
+    .navbar2{
+        justify-content: space-between;
+        font-size: 20px;
+        width: 900px;
+        margin-inline: -200px;
+    }
+    .product{
+        font-size: 2.5rem;
+        margin-left: 20px;
+        margin-inline: 20px;
+    }
+    .pro img{
+        display: inline;
+        justify-content:space-between;
+        width: 120px;
+        
+}
+.boxes h1{
+    
+    font-size: 1rem;
+}
+.boxes{
+    width: 830px;
+}
+.boxes h1{
+    width: 50px;
+    margin-left: 150px;    
+    font-size: 2.5rem;
+}
+.boxes div{
+    justify-content: space-around;
+    width: 200px;
+    height: 260px;
+}
+.boxes img{
+    width: 180px;
+    height: 150px;
+    margin-inline: 6px;
+    margin-top: 8px;
+}
+.footer{
+    width: 830px;
+}
+}
